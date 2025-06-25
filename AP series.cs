@@ -7,16 +7,21 @@ namespace Practise
         static void Main()
         {
             Console.WriteLine("Enter the first term of AP Series:");
-            int first = Convert.ToInt32(Console.ReadLine());
+            int a = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter the common term of AP Series:");
-            int common = Convert.ToInt32(Console.ReadLine());
+            int d = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter the number of term of AP Series:");
-            int total = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
 
-            int sum = total * (2 * first + (total - 1) * common) / 2;       //   n/2[2a + (n-1) *d]
+            for(int i=1;i<=n;i++){
+                int terms= a+(i-1)*d;
+                Console.WriteLine("terms :"+terms);          // terms of AP series =  a+(n−1)×d
+            }
 
+            int sum = n * (2 * a + (n - 1) * d) / 2;       //   sum of AP series=  n/2(2a + (n-1) *d)
+                                                                             
             Console.WriteLine("Sum of AP series is " + sum);
         }
     }
